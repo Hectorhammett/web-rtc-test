@@ -10,6 +10,7 @@ const Room = (props) => {
     const userStream = useRef();
 
     useEffect(() => {
+        console.log("mounted");
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
             userStream.current = stream;
